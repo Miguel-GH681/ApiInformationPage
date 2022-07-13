@@ -1,7 +1,6 @@
 'use strict'
 
 var express = require('express');
-const app = require('../app');
 var waterHeaterController = require('../controllers/waterheater.controller');
 const upload = require('../utils/multer.config');
 
