@@ -36,8 +36,8 @@ async function saveWaterHeater(req, res){
             waterHeater.warranty.requirements = params.warrantyRequirements;
             waterHeater.warranty.time = params.warrantyTime;
             waterHeater.warranty.supplier = params.warrantySupplier;
-            waterHeater.accesories = params.accesories;
-
+            waterHeater.accesories.plomeria = params.accesoriesPlomeria;
+            waterHeater.accesories.electrico = params.accesoriesElectrico;
             waterHeater.save((err, success)=>{
                 if(err){
                     res.status(500).send({message: 'Server error!', err});
