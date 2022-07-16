@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var app = require('./app');
 var port = 3800;
 
-mongoose.connect('mongodb://localhost:27017/pruebaUno', {useNewUrlParser:true, useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://alcrack:guest12345@cluster0.exvzvb1.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser:true, useUnifiedTopology: true})
     .then(()=>{
         console.log('Successful Connection')
         app.listen(process.env.PORT || port, ()=>{
