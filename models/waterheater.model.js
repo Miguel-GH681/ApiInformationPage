@@ -29,7 +29,10 @@ var waterHeaterSchema = Schema({
         time: String,
         supplier: String
     },
-    accesories : []
+    accesories : {
+        plomeria :[],
+        electrico: []
+    }
 });
 
 module.exports = mongoose.model('waterheater', waterHeaterSchema);
