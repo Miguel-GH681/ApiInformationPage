@@ -15,14 +15,13 @@ var waterHeaterSchema = Schema({
     services: String,
     type: String,
     packageSize: String,
-    weight: String,
+    userManual: String,
     image: {
         url: String,
         id: String
     },
     power: String,
     voltage: String,
-    numberTemperatures: String,
     rangeTemperature: String,
     warranty: {
         requirements: String,
@@ -30,8 +29,8 @@ var waterHeaterSchema = Schema({
         supplier: String
     },
     accesories : {
-        plomeria :[],
-        electrico: []
+        plumbingSupplies :[],
+        electricalItems: []
     }
 });
 

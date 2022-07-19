@@ -26,18 +26,18 @@ async function saveWaterHeater(req, res){
             waterHeater.services = params.services;
             waterHeater.type = params.type;
             waterHeater.packageSize = params.packageSize;
-            waterHeater.weight = params.weight;
+            waterHeater.userManual = params.userManual;
             waterHeater.image.url = result.secure_url;
             waterHeater.image.id = result.public_id;
             waterHeater.power = params.power;
             waterHeater.voltage = params.voltage;
-            waterHeater.numberTemperatures = params.numberTemperatures;
             waterHeater.rangeTemperature = params.rangeTemperature;
+            waterHeater.accesories.plumbingSupplies = params.plumbingSupplies;
+            waterHeater.accesories.electricalItems = params.electricalItems;
             waterHeater.warranty.requirements = params.warrantyRequirements;
             waterHeater.warranty.time = params.warrantyTime;
             waterHeater.warranty.supplier = params.warrantySupplier;
-            waterHeater.accesories.plomeria = params.accesoriesPlomeria;
-            waterHeater.accesories.electrico = params.accesoriesElectrico;
+
             waterHeater.save((err, success)=>{
                 if(err){
                     res.status(500).send({message: 'Server error!', err});
